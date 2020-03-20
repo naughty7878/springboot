@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    username: admin
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/test_mybatis?allowPublicKeyRetrieval=true&useSSL=true
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    # 底层通过hibernate来实现的
+    hibernate:
+      # 更新或者创建数据表结构
+      ddl-auto: update
+      # 控制台显示SQL
+    show-sql: true

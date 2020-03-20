@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.springboot.dao.slave.DogDao">
+
+    <!-- 获取所有狗 -->
+    <select id="getAll" resultType="com.test.springboot.bean.Dog">
+        select * from dog
+    </select>
+
+</mapper>

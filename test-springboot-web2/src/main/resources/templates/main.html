@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>main</title>
+</head>
+<body style="text-align: center;">
+    <h3>主页</h3>
+    <br>
+    [[${session.loginUser}]]
+    <h4><a  th:href="@{/emps}">员工列表</a></h4>
+    提示-：[[${msg}]]
+</body>
+</html>

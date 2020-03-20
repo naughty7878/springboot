@@ -1,0 +1,9 @@
+spring:
+  mail:
+    host: smtp.163.com
+    port: 25
+    username: 123456@163.com
+    password: 123456
+    properties:
+      # 开启debug调试  ，打印信息
+      mail.debug: true

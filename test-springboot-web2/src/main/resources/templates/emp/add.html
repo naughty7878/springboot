@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body style="text-align: center;">
+    <h3>添加员工</h3>
+
+    <!-- 发送put请求修改员工数据 -->
+    <!--
+        1、SpringMVC中配置HiddenHttpMethodFilter（SpringBoot自动配置）
+        2、页面创建一个post表单
+        3、创建一个input项，name="_method"; 值就是我们指定的请求方式
+    -->
+    <form th:action="@{/emp}" method="post">
+        <input type="hidden" name="_method" value="put" th:if="${emp!=null}"/>
+        <input type="hidden" name="id" th:value="${emp.id}" th:if="${emp!=null}" />
+        <p>lastName：<input type="text" name="lastName" th:value="${emp != null}?${emp.lastName}"/></p>
+        <p>email： <input type="text" name="email" th:value="${emp != null}?${emp.email}" /></p>
+        <p>gender：
+            <input type="radio" name="gender" value="1" th:checked="${emp != null}?${emp.gender==1}">男
+            <input type="radio" name="gender" value="0" th:checked="${emp != null}?${emp.gender==0 }">女
+        </p>
+        <p>department：
+            <select name="department.id" >
+                <option th:each="dept:${depts}" th:value="${dept.id}" th:selected="${emp != null}?${dept.id == emp.department.id}" th:text="${dept.departmentName}"></option>
+            </select>
+        <p>birth： <input type="text" name="birth" th:value="${emp != null}?${#dates.format(emp.birth, 'yyyy-MM-dd')}"/></p>
+        <input type="submit" th:value="${emp != null? '修改' : '添加'}" />
+    </form>
+</body>
+</html>

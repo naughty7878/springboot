@@ -1,0 +1,8 @@
+#logging:
+#  level:
+#    com:
+#      test: debug
+
+#  file: my.log
+# 在当前磁盘的根路径下创建spring文件夹和里面的log文件夹;使用 spring.log 作为默认文件
+#  path: /Users/h__d/Desktop

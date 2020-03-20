@@ -1,0 +1,4 @@
+test:
+  hello:
+    prefix: 测试前缀
+    suffix: 测试后缀

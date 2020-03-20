@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    username: admin
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/test_mybatis?allowPublicKeyRetrieval=true&useSSL=true
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+mybatis:
+  # 指定全局配置文件位置
+  config-location: classpath:mybatis/mybatis-config.xml
+  # 指定sql映射文件位置
+  mapper-locations: classpath:mybatis/mapper/*.xml

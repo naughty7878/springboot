@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.4//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.springboot.dao.master.UserDao">
+    <resultMap type="com.test.springboot.bean.User" id="user">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+    </resultMap>
+
+    <!-- 获取所有用户 -->
+    <select id="getAll" resultMap="user">
+        select * from user
+    </select>
+
+</mapper>
