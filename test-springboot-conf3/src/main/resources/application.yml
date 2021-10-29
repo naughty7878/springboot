@@ -1,0 +1,7 @@
+server:
+  port: 8081
+
+xxxx:
+  name: abc
+#
+#debug: true
