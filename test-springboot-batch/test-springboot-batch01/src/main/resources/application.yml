@@ -2,9 +2,9 @@
 
 spring:
   datasource:
-    username: hd
-    password: hd123456
-    url: jdbc:mysql://47.106.74.177:13306/test_springbatch?allowPublicKeyRetrieval=true&useSSL=true
+    username: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/test_springbatch?allowPublicKeyRetrieval=true&useSSL=true
     driver-class-name: com.mysql.cj.jdbc.Driver
     # 初始化数据库，文件在依赖jar包中
 #    schema: classpath:org/springframework/batch/core/schema-mysql.sql
