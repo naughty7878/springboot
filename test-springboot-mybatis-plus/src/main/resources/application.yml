@@ -1,8 +1,8 @@
 spring:
   datasource:
-    username: root
-    password: 123456
-    url: jdbc:mysql://127.0.0.1:3306/test_mybatis?allowPublicKeyRetrieval=true&useSSL=true
+    username: hd
+    password: hd123456
+    url: jdbc:mysql://47.106.74.177:13306/test_mybatis_plus?allowPublicKeyRetrieval=true&useSSL=true
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 mybatis-plus:
