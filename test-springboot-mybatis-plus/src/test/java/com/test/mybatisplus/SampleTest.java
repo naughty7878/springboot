@@ -53,7 +53,7 @@ public class SampleTest {
     @Test
     public void testUpdate() {
         Employee employee = new Employee();
-        employee.setId(5);
+        employee.setId(5L);
         employee.setEmail("");
 //        employee.setGender(1);
         employee.setAge(40);
