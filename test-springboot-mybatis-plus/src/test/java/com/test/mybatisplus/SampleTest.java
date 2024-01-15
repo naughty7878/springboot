@@ -14,10 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @SpringBootTest
 public class SampleTest {
@@ -29,6 +26,7 @@ public class SampleTest {
 
     @Autowired
     EmployeeService employeeService;
+
     @Test
     public void testSelectList() {
         System.out.println(("----- selectAll method test ------"));
@@ -93,5 +91,22 @@ public class SampleTest {
         System.out.println("employeePage = " + employeePage);
         System.out.println("employeePage.getTotal() = " + employeePage.getTotal());
         System.out.println("employeePage.getRecords() = " + employeePage.getRecords());
+    }
+
+    @Test
+    public void testSaveBatch() {
+        List<Employee> list = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            Employee employee = new Employee();
+            employee.setEmail("xx" + i + "@qq.com");
+            employee.setLastName("xx" + i);
+            employee.setAge(20 + i);
+            list.add(employee);
+        }
+        boolean b = employeeService.saveBatch(list);
+        System.out.println("b = " + b);
+        for (Employee employee : list) {
+            System.out.println("employee = " + employee);
+        }
     }
 }
