@@ -20,8 +20,6 @@ import java.util.*;
 public class SampleTest {
 
     @Autowired
-    SqlSessionFactory sqlSessionFactory;
-    @Autowired
     private EmployeeMapper employeeMapper;
 
     @Autowired
