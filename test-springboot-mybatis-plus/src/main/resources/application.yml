@@ -11,6 +11,8 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   # mapper xml文件默认位置：classpath*:/mapper/**/*.xml
   mapper-locations: classpath*:/mapper/**/*.xml
+  # 配置类型别名对应的包
+#  type-aliases-package: com.test.mybatisplus.entity
 #mybatis:
 #  # 指定全局配置文件位置
 #  config-location: classpath:mybatis/mybatis-config.xml

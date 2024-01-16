@@ -84,11 +84,6 @@ public class SampleTest {
 //        List<Employee> employees = employeeMapper.selectByMap(param);
 //        System.out.println("employees = " + employees);
 
-        // 分页查询
-        Page<Employee> employeePage = employeeMapper.selectPage(new Page<>(2, 4), null);
-        System.out.println("employeePage = " + employeePage);
-        System.out.println("employeePage.getTotal() = " + employeePage.getTotal());
-        System.out.println("employeePage.getRecords() = " + employeePage.getRecords());
     }
 
     @Test
