@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.test.mybatisplus.enums.SexEnum;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -19,7 +20,8 @@ public class Employee {
     private Long id;
 //    @TableField(value = "last_name")
     private String lastName;
-    private Integer gender;
+
+    private SexEnum gender;
     private String email;
     private Integer age;
     @TableField(exist = false)

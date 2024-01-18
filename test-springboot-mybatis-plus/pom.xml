@@ -48,6 +48,15 @@
             <version>3.5.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>3.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+        </dependency>
         <!-- mysql -->
         <dependency>
             <groupId>mysql</groupId>

@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.conditions.query.LambdaQueryChainWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.test.mybatisplus.entity.Employee;
+import com.test.mybatisplus.enums.SexEnum;
 import com.test.mybatisplus.mapper.EmployeeMapper;
 import com.test.mybatisplus.service.EmployeeService;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -101,5 +102,18 @@ public class SampleTest {
         for (Employee employee : list) {
             System.out.println("employee = " + employee);
         }
+    }
+
+    @Test
+    public void testEnum() {
+        Employee employee = new Employee();
+        employee.setLastName("MPP");
+        employee.setEmail("qqq@qq.com");
+        employee.setGender(SexEnum.MALE);
+        employee.setAge(20);
+        employee.setSalary(BigDecimal.valueOf(100));
+        int insert = employeeMapper.insert(employee);
+        System.out.println("insert = " + insert);
+        System.out.println("employee = " + employee);
     }
 }
