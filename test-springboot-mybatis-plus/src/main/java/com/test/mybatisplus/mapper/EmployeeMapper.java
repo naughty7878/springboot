@@ -14,9 +14,6 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface EmployeeMapper extends BaseMapper<Employee> {
 
-    List<Employee> queryAgeByIdAndEmail(@Param("id") Long id, @Param("email") String email);
-
-    ;
     // 自定义分页
     Page<Employee> selectPageVo(@Param("page") Page<Employee> page, @Param("age") Integer age);
 }
