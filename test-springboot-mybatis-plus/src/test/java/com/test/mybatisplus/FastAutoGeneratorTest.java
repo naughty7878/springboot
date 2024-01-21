@@ -18,11 +18,11 @@ public class FastAutoGeneratorTest {
                     builder.author("hd") // 设置作者
 //                            .enableSwagger() // 开启 swagger 模式
                             .fileOverride() // 覆盖已生成文件
-                            .outputDir("/Users/h__d/Desktop"); // 指定输出目录
+                            .outputDir("D://"); // 指定输出目录
                 })
 
                 .packageConfig(builder -> {
-                    builder.parent("com.baomidou.mybatisplus.samples.generator") // 设置父包名
+                    builder.parent("com.test.mybatisplus") // 设置父包名
                             .moduleName("system") // 设置父包模块名
                             .pathInfo(Collections.singletonMap(OutputFile.xml, "D://")); // 设置mapperXml生成路径
                 })

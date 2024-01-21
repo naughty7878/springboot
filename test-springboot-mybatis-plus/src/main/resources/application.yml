@@ -15,8 +15,3 @@ mybatis-plus:
 #  type-aliases-package: com.test.mybatisplus.entity
   # 配置扫描通用枚举
   type-enum-package: com.test.mybatisplus.enums
-#mybatis:
-#  # 指定全局配置文件位置
-#  config-location: classpath:mybatis/mybatis-config.xml
-#  # 指定sql映射文件位置
-#  mapper-locations: classpath:mybatis/mapper/*.xml

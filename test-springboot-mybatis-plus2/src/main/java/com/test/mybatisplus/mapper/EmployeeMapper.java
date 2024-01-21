@@ -1,5 +1,6 @@
 package com.test.mybatisplus.mapper;
 
+import com.baomidou.dynamic.datasource.annotation.DS;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.test.mybatisplus.entity.Employee;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Repository;
  * 基于MP：  让XxxMapper接口继承 BaseMapper接口即可
  *          BaseMapper<T> ： 泛型指定的就是当前Mapper接口所操作的实体类型
  */
+@DS("master")
 public interface EmployeeMapper extends BaseMapper<Employee> {
 
     // 自定义分页

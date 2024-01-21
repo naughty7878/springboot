@@ -1,10 +1,10 @@
 package com.test.mybatisplus.mapper;
+import java.util.List;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.test.mybatisplus.entity.Employee;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
 
 /**
  * Mapper 接口
@@ -14,6 +14,9 @@ import org.springframework.stereotype.Repository;
  */
 public interface EmployeeMapper extends BaseMapper<Employee> {
 
+    List<Employee> queryAgeByIdAndEmail(@Param("id") Long id, @Param("email") String email);
+
+    ;
     // 自定义分页
     Page<Employee> selectPageVo(@Param("page") Page<Employee> page, @Param("age") Integer age);
 }
