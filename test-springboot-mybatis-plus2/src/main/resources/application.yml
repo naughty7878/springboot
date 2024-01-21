@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    username: hd
+    password: hd123456
+    url: jdbc:mysql://47.106.74.177:13306/test_mybatis_plus?allowPublicKeyRetrieval=true&useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  configuration:
+    # 日志输出SQL
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # mapper xml文件默认位置：classpath*:/mapper/**/*.xml
+  mapper-locations: classpath*:/mapper/**/*.xml
+  # 配置类型别名对应的包
+#  type-aliases-package: com.test.mybatisplus.entity
+  # 配置扫描通用枚举
+  type-enum-package: com.test.mybatisplus.enums
+#mybatis:
+#  # 指定全局配置文件位置
+#  config-location: classpath:mybatis/mybatis-config.xml
+#  # 指定sql映射文件位置
+#  mapper-locations: classpath:mybatis/mapper/*.xml
